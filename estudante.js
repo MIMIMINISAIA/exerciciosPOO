@@ -1,5 +1,5 @@
 "use strict";
-class estudo {
+class estudante {
     constructor(nome, idade, notas) {
         this.nome = nome;
         this.idade = idade;
@@ -20,3 +20,9 @@ class estudo {
         }
     }
 }
+let estudante1 = new estudante("joão", 16, [6, 7, 9]);
+console.log(estudante1.calcular());
+let estudante2 = new estudante("Milly", 16, [10, 7, 9]);
+console.log(estudante2.calcular());
+let estudante3 = new estudante("jubiscreuda", 16, [5, 2, 3]);
+console.log(estudante3.calcular());
