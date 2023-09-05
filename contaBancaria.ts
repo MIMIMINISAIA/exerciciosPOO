@@ -1,6 +1,6 @@
 class Contabancaria{
     titular: string;
-    saldo: number;
+    private saldo: number;
    
 
     constructor(titular: string, saldo: number){
