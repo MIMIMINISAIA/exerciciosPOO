@@ -50,11 +50,14 @@ class Loja {
         return this.carrinho.remover(produto);
         //return "produto removido do carrinho de compras";
     }
-    exibirProduto(produto) {
+    exibirProduto() {
         console.log("exibir produto");
         for (let i = 0; i < this.carrinho.lista.length; i++) {
             console.log("exibir produto : " + this.carrinho.lista[i].nome + " tem o preço de: " + this.carrinho.lista[i].preco);
         }
+    }
+    exibirValorCarrinho() {
+        return this.carrinho.Calcular();
     }
 }
 const produtos1 = new Produto("Camisa", 80);
@@ -66,5 +69,7 @@ produtosCarrinho.adicionarProdutoLoja(produtos2);
 produtosCarrinho.adicionarProdutoLoja(produtos3);
 console.log(produtosCarrinho.remover(produtos1));
 console.log(produtosCarrinho.adicionarProdutoCarrinho(produtos2));
+console.log(produtosCarrinho.adicionarProdutoCarrinho(produtos3));
 console.log(produtosCarrinho.RemoverProdutoCarrinho(produtos3));
-console.log(produtosCarrinho.exibirProduto(produtos1));
+console.log(produtosCarrinho.exibirProduto());
+console.log(produtosCarrinho.exibirValorCarrinho());
